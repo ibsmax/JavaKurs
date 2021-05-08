@@ -81,8 +81,6 @@ public class Task3 {
                             max_count = count;
                             max_string = myMassive[i];
                         }
-                        if (i == length_mass - 1) {
-                        }
                     }
                 }
                 System.out.print("\n" + "Самая длинная строка = " + max_string);
