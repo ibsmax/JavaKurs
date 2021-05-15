@@ -13,42 +13,41 @@ public class Task4_part1 {
          @author Pystogov Maxim
          */
         // Часть 1
-        int min = -9;
-        int max = 9;
         int elements_count = 20;
-        double myMassive[] = new double[elements_count];
-        ArrayList<Double> myArrayList = new ArrayList<Double>();
+        int min = -10;
+        int max = 10;
+        int myMassive[] = new int[elements_count];
+        ArrayList<Integer> myArrayList = new ArrayList<Integer>();
         System.out.print("Элементы массива: ");
         for (int i = 0; i < elements_count; i++) {
-            double per = (double) (Math.random() * ((max - min) + 1)) + min;
+            int per = min + (int) (Math.random() * ((max - min) + 1));
             myMassive[i] = per;
-            myMassive[i] = (Double) Math.floor(myMassive[i] * 100) / 100.0;
         }
-        double maximum = myMassive[0];
-        double minimum = myMassive[0];
+        int minimum_plus = 11;
+        int maximum_minus = myMassive[0];
 
         for (int i = 0; i < elements_count; i++) {
 
-            if (minimum > myMassive[i]) {
-                minimum = myMassive[i];
+            if (maximum_minus > myMassive[i] && myMassive[i] < 0) {
+                maximum_minus = myMassive[i];
             }
-            if (maximum < myMassive[i]) {
-                maximum = myMassive[i];
+            if (minimum_plus > myMassive[i] && myMassive[i] > 0) {
+                minimum_plus = myMassive[i];
             }
             System.out.print(myMassive[i] + " ");
             myArrayList.add(myMassive[i]);
             if (i == 19) {
                 System.out.print("\n");
-                System.out.print("\n" + "Максимальный элемент массива = " + maximum + "\n" + "Минимальный элемент массива = " + minimum + "\n" + "\n");
+                System.out.print("\n" + "Минимальный положительный элемент массива = " + minimum_plus + "\n" + "Максимальный отрицательный элемент массива = " + maximum_minus + "\n" + "\n");
                 for (int k = 0; k < myArrayList.size(); k++)
-                    if (myArrayList.get(k) == maximum) {
-                        double position1 = k;
-                        double tmp = myMassive[(int) position1];
+                    if (myArrayList.get(k) == minimum_plus) {
+                        int position1 = k;
+                        int tmp = myMassive[position1];
                         for (int m = 0; m < myArrayList.size(); m++)
-                            if (myArrayList.get(m) == minimum) {
-                                double position2 = m;
-                                myMassive[(int) position1] = myMassive[(int) position2];
-                                myMassive[(int) position2] = tmp;
+                            if (myArrayList.get(m) == maximum_minus) {
+                                int position2 = m;
+                                myMassive[position1] = myMassive[position2];
+                                myMassive[position2] = tmp;
                             }
                     }
                 System.out.print("Массив после замены переменных: ");
