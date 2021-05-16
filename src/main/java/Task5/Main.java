@@ -16,7 +16,7 @@ public class Main {
         System.out.println("Введите первое число");
         Scanner scanner = new Scanner(System.in);
         Double per1 = scanner.nextDouble();
-        System.out.println("Введите знак операции (+,-,/,*");
+        System.out.println("Введите знак операции (+,-,/,*)");
         String oper = scanner.next();
         System.out.println("Введите второе число");
         Double per2 = scanner.nextDouble();
