@@ -23,22 +23,22 @@ public class Main {
         if (oper.equals("+")) {
             Addition.setPer1(per1);
             Addition.setPer2(per2);
-            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = "+ Addition.getResult(per1, per1));
+            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = "+ Addition.getResult(per1, per2));
         }
         if (oper.equals("-")) {
-            Addition.setPer1(per1);
-            Addition.setPer2(per2);
-            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + Subtraction.getResult(per1, per1));
+            Subtraction.setPer1(per1);
+            Subtraction.setPer2(per2);
+            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + Subtraction.getResult(per1, per2));
         }
         if (oper.equals("/")) {
-            Addition.setPer1(per1);
-            Addition.setPer2(per2);
-            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + Division.getResult(per1, per1));
+            Division.setPer1(per1);
+            Division.setPer2(per2);
+            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + Division.getResult(per1, per2));
         }
         if (oper.equals("*")) {
-            Addition.setPer1(per1);
-            Addition.setPer2(per2);
-            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + Multiplication.getResult(per1, per1));
+            Multiplication.setPer1(per1);
+            Multiplication.setPer2(per2);
+            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + Multiplication.getResult(per1, per2));
         }
     }
 }

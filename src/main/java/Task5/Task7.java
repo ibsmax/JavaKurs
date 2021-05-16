@@ -28,22 +28,22 @@ public class Task7 {
             if (oper.equals("+")) {
                 Addition.setPer1(per1);
                 Addition.setPer2(per2);
-                System.out.println("Результат вычисления: " + per1 + " " + oper + " " + per2 + " = " + Addition.getResult(per1, per1));
+                System.out.println("Результат вычисления: " + per1 + " " + oper + " " + per2 + " = " + Addition.getResult(per1, per2));
             }
             if (oper.equals("-")) {
                 Addition.setPer1(per1);
                 Addition.setPer2(per2);
-                System.out.println("Результат вычисления: " + per1 + " " + oper + " " + per2 + " = " + Subtraction.getResult(per1, per1));
+                System.out.println("Результат вычисления: " + per1 + " " + oper + " " + per2 + " = " + Subtraction.getResult(per1, per2));
             }
             if (oper.equals("/")) {
                 Addition.setPer1(per1);
                 Addition.setPer2(per2);
-                System.out.println("Результат вычисления: " + per1 + " " + oper + " " + per2 + " = " + Division.getResult(per1, per1));
+                System.out.println("Результат вычисления: " + per1 + " " + oper + " " + per2 + " = " + Division.getResult(per1, per2));
             }
             if (oper.equals("*")) {
                 Addition.setPer1(per1);
                 Addition.setPer2(per2);
-                System.out.println("Результат вычисления: " + per1 + " " + oper + " " + per2 + " = " + Multiplication.getResult(per1, per1));
+                System.out.println("Результат вычисления: " + per1 + " " + oper + " " + per2 + " = " + Multiplication.getResult(per1, per2));
             }
         }
          catch (InputMismatchException e)
