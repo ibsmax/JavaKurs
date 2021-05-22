@@ -1,12 +1,8 @@
 package Task5;
 
-import Task5.operations.Addition;
-import Task5.operations.Division;
-import Task5.operations.Multiplication;
-import Task5.operations.Subtraction;
-
-import java.io.IOException;
 import java.util.Scanner;
+
+import static Task5.Calculator.*;
 
 public class Main {
     /** Задание 5 (Реализовать калькулятор в стиле ООП. Архитектуру приложения продумать самостоятельно.)
@@ -21,24 +17,24 @@ public class Main {
         System.out.println("Введите второе число");
         Double per2 = scanner.nextDouble();
         if (oper.equals("+")) {
-            Addition.setPer1(per1);
-            Addition.setPer2(per2);
-            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = "+ Addition.getResult(per1, per2));
+            Calculator.per1 = per1;
+            Calculator.per2 = per2;
+            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = "+ GetResultAdditional(Calculator.per1, Calculator.per2));
         }
         if (oper.equals("-")) {
-            Subtraction.setPer1(per1);
-            Subtraction.setPer2(per2);
-            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + Subtraction.getResult(per1, per2));
+            Calculator.per1 = per1;
+            Calculator.per2 = per2;
+            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + GetResultSubstraction(Calculator.per1, Calculator.per2));
         }
         if (oper.equals("/")) {
-            Division.setPer1(per1);
-            Division.setPer2(per2);
-            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + Division.getResult(per1, per2));
+            Calculator.per1 = per1;
+            Calculator.per2 = per2;
+            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + GetResultDivision(Calculator.per1, Calculator.per2));
         }
         if (oper.equals("*")) {
-            Multiplication.setPer1(per1);
-            Multiplication.setPer2(per2);
-            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + Multiplication.getResult(per1, per2));
+            Calculator.per1 = per1;
+            Calculator.per2 = per2;
+            System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + GetResultMultiplication(Calculator.per1, Calculator.per2));
         }
     }
 }
