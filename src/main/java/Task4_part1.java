@@ -24,11 +24,11 @@ public class Task4_part1 {
             myMassive[i] = per;
         }
         int minimum_plus = 11;
-        int maximum_minus = myMassive[0];
+        int maximum_minus = -11;
 
         for (int i = 0; i < elements_count; i++) {
 
-            if (maximum_minus > myMassive[i] && myMassive[i] < 0) {
+            if (maximum_minus < myMassive[i] && myMassive[i] < 0) {
                 maximum_minus = myMassive[i];
             }
             if (minimum_plus > myMassive[i] && myMassive[i] > 0) {
