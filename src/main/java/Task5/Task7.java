@@ -23,21 +23,37 @@ public class Task7 {
             System.out.println("Введите второе число");
             Double per2 = scanner.nextDouble();
             if (oper.equals("+")) {
-                System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = "+ GetResultAdditional(per1, per2));
+                Calculator.per1 = per1;
+                Calculator.per2 = per2;
+                System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = "+ GetResultAdditional(Calculator.per1, Calculator.per2));
             }
             if (oper.equals("-")) {
-                System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + GetResultMultiplication(per1, per2));
+                Calculator.per1 = per1;
+                Calculator.per2 = per2;
+                System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + GetResultSubstraction(Calculator.per1, Calculator.per2));
             }
             if (oper.equals("/")) {
-                System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + GetResultSubstraction(per1, per2));
+                Calculator.per1 = per1;
+                Calculator.per2 = per2;
+                System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + GetResultDivision(Calculator.per1, Calculator.per2));
             }
             if (oper.equals("*")) {
-                System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + GetResultDivision(per1, per2));
+                Calculator.per1 = per1;
+                Calculator.per2 = per2;
+                System.out.println("Результат вычисления: "+per1+ " "+oper+" "+per2+" = " + GetResultMultiplication(Calculator.per1, Calculator.per2));
             }
         }
          catch (InputMismatchException e)
         {
             System.out.print("При вводе нецелого числа используйте запятые вместо точек, в качестве разделителя!");
+        }
+        catch (NullPointerException e)
+        {
+            System.out.print("Передаваемые значения не должны равнятся - null!");
+        }
+        catch (ClassCastException  e)
+        {
+            System.out.print("Выполнена неверная операция преобразования типов!");
         }
     }
 }
