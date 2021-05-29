@@ -8,22 +8,13 @@ public class GiftBox {
         Etc etc1 = new Etc("Etc", 9,15,"lollipops");
         Sweets [] giftBox = {candy1,jellybean1,etc1};
         System.out.println("Состав подарка:");
+        int finalPrice = 0, finalWeight = 0;
         for (Sweets someSweets: giftBox) {
             System.out.println(someSweets.toString());
+            finalPrice = finalPrice + someSweets.getPrice();
+            finalWeight = finalWeight + someSweets.getWeight();
         }
-        int finalWeight =0;
-        Integer[] weighttBox = {candy1.getWeight(),jellybean1.getWeight(),etc1.getWeight()};
-        for (int i = 0; i < weighttBox.length; i++) {
-            finalWeight=finalWeight+weighttBox[i];
-        }
-        System.out.print("Общий вес подарка = ");
-        System.out.println(finalWeight+" грамм");
-        int finalPrice =0;
-        Integer[] prcietBox = {candy1.getPrice(),jellybean1.getPrice(),etc1.getPrice()};
-        for (int i = 0; i < prcietBox.length; i++) {
-            finalPrice=finalPrice+prcietBox[i];
-        }
-        System.out.print("Общая стоимость подарка = ");
-        System.out.println(finalPrice+" руб");
+        System.out.println("Общий вес подарка = " + finalWeight + " грамм");
+        System.out.println("Общая стоимость подарка = " + finalPrice + " руб");
     }
 }
