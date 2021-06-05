@@ -35,11 +35,21 @@ public class OperationsTests {
 
     @Test
     public void DivisionZeroTest() {
-        per1 = 10.0;
-        per2 = 0.0;
-        if (per2 == 0.0) {
-            System.out.println("Попытка деления на ноль!");
+        double res = 0;
+        boolean resActual = false;
+        boolean resExcpetced = true;
+        try {
+            per1 = 10.0;
+            per2 = 0.0;
+            res =GetResultDivision(per1, per2);
+            if (res == Double.POSITIVE_INFINITY ||
+                    res == Double.NEGATIVE_INFINITY)
+                throw new ArithmeticException();
         }
-        Assert.assertEquals(true, GetResultDivision(per1, per2));
+        catch (ArithmeticException e) {
+            System.out.println("Попытка деления на 0 !");
+            resActual = true;
+        }
+        Assert.assertEquals(resExcpetced,resActual);
     }
 }
